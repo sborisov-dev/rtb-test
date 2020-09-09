@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="viApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Angular 1 email editor</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<div class="app-container" ng-controller="viAppController">
+    <h1 class="app-title">Share &#8243;Board name&#8243; with others</h1>
+    <email-editor emails="emails" on-emails-updated="onEmailsUpdated()"></email-editor>
+    <button class="btn btn-blue btn-first" ng-click="addEmails()">Add email</button>
+    <button class="btn btn-blue" ng-click="getEmailsCount()">Get emails count</button>
+</div>
+<script src="bower_components/angular/angular.js"></script>
+<script src="app.js"></script>
+<script src="directives/email-editor/email-editor.js"></script>
+<script src="directives/email-validate/email-validate.js"></script>
+</body>
+</html>

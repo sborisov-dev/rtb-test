@@ -1,0 +1,24 @@
+<div class="EE_inner-wrapper" id="wrapper" auto-focus>
+    <span class="EE_items-container">
+        <span *ngFor="let email of emails"
+              (click)="stopEvent($event);"
+              [class.invalid]="!isValidEmail(email)"
+              class="EE_item"
+              title="{{email}}">
+            <div class="EEI_content">{{email}}</div>
+            <div class="EEI_wrapper">
+                <span class="EEI_icon EEI_icon-cross" title="Remove email"
+                      (click)="removeEmail(email);stopEvent($event);"></span>
+            </div>
+        </span>
+    </span>
+    <textarea
+            [(ngModel)]="rawText"
+            (keyup)="onKeyUp($event)"
+            (keydown)="onKeyDown($event)"
+            (keydown.backspace)="onBackspace()"
+            (blur)="processRawText()"
+            (paste)="onPaste()"
+            [attr.placeholder]="watermark || 'add more people ...'"
+            class="EE_input"></textarea>
+</div>

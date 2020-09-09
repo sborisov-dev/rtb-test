@@ -1,0 +1,23 @@
+<div class="EE_inner-wrapper" id="wrapper">
+    <span class="EE_items-container">
+        <span ng-repeat="it in emails"
+              email-validate
+              ng-click="$event.stopImmediatePropagation();"
+              class="EE_item"
+              title="{{it}}" >
+            <div class="EEI_content">{{it}}</div>
+            <div class="EEI_wrapper">
+                <span class="EEI_icon EEI_icon-cross" title="Remove email" ng-click="remove(it);$event.stopImmediatePropagation();"></span>
+            </div>
+        </span>
+    </span>
+    <textarea
+            class="EE_input"
+            placeholder="{{watermark || 'add more people ...'}}"
+            ng-model="rawText"
+            ng-blur="processRawText()"
+            ng-keydown="handleKeyDown($event)"
+            ng-keyup="handleKeyUp($event)"
+            ng-paste="handlePaste();"
+    ></textarea>
+</div>

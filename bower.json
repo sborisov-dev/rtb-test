@@ -1,0 +1,14 @@
+{
+  "name": "vi.email.editor",
+  "description": "A Vitamin angular 1 test",
+  "version": "0.0.1",
+  "author": "Sergey Borisov <borisovsa1@gmail.com>",
+  "homepage": "https://bitbucket.org/borisov-sergey/vi.email.editor",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-loader": "~1.5.0",
+    "angular-mocks": "~1.5.0"
+  }
+}
